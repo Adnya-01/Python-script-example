@@ -1,4 +1,4 @@
-# 🎮 Game Build & Packaging Automation (Python + Go)
+# Game Build & Packaging Automation (Python + Go)
 
 This project is a Python-based automation script that scans a directory of Go game projects, copies them into a target folder, compiles their Go code, and generates a metadata file describing the available games.
 
@@ -6,7 +6,7 @@ It automates the process of managing multiple Go-based game projects in a struct
 
 ---
 
-## 🚀 What This Project Does
+## What This Project Does
 
 The script performs the following tasks automatically:
 
@@ -18,7 +18,7 @@ The script performs the following tasks automatically:
 6. Creates a `metadata.json` file listing all games and their count  
 
 ---
-## 🧠 How It Works
+## How It Works
 
 - The script searches for folders containing the word `"game"`.
 - Each game folder is copied into the target directory.
@@ -33,18 +33,10 @@ The script performs the following tasks automatically:
   - List of game names  
   - Total number of games  
 
-Example:
-
-```json
-{
-  "gamenames": ["snake", "tetris"],
-  "numberofgames": 2
-}
-```
 
 ---
 
-## 🎯 Why This Project Is Useful
+## Why This Project Is Useful
 
 This project demonstrates:
 
@@ -58,7 +50,7 @@ It simulates how automation is used in real software build systems.
 
 ---
 
-## 📚 Learning Source
+## Learning Source
 
 This project was created as a **hands-on learning exercise** based on the following YouTube tutorial:
 
