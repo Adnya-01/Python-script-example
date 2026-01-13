@@ -1,14 +1,69 @@
-# Python-Scripting-Project
+# 🎮 Game Build & Packaging Automation (Python + Go)
 
-# 💻 Launch Your Software Development Career Today!  
+This project is a Python-based automation script that scans a directory of Go game projects, copies them into a target folder, compiles their Go code, and generates a metadata file describing the available games.
 
-🎓 **No degree? No problem!** My program equips you with everything you need to break into tech and land an entry-level software development role.  
+It automates the process of managing multiple Go-based game projects in a structured and repeatable way.
 
-🚀 **Why Join?**  
-- 💼 **$70k+ starting salary potential**  
-- 🕐 **Self-paced:** Complete on your own time  
-- 🤑 **Affordable:** Low risk compared to expensive bootcamps or degrees
-- 🎯 **45,000+ job openings** in the market  
+---
 
-👉 **[Start your journey today!](https://techwithtim.net/dev)**  
-No experience needed—just your determination. Future-proof your career and unlock six-figure potential like many of our students have!  
+## 🚀 What This Project Does
+
+The script performs the following tasks automatically:
+
+1. Scans a source folder for game directories  
+2. Identifies folders containing the word **"game"**  
+3. Renames them by removing `_game` from the folder name  
+4. Copies each game into a target folder  
+5. Compiles the Go (`.go`) files inside each copied game folder  
+6. Creates a `metadata.json` file listing all games and their count  
+
+---
+## 🧠 How It Works
+
+- The script searches for folders containing the word `"game"`.
+- Each game folder is copied into the target directory.
+- The `_game` suffix is removed from the folder name.
+- Inside each copied folder, the script runs:
+
+  ```bash
+  go build <filename.go>
+  ```
+
+- A `metadata.json` file is created with:
+  - List of game names  
+  - Total number of games  
+
+Example:
+
+```json
+{
+  "gamenames": ["snake", "tetris"],
+  "numberofgames": 2
+}
+```
+
+---
+
+## 🎯 Why This Project Is Useful
+
+This project demonstrates:
+
+- File system automation using Python  
+- Integration with Go build tools  
+- Subprocess handling  
+- Build pipelines  
+- Metadata generation  
+
+It simulates how automation is used in real software build systems.
+
+---
+
+## 📚 Learning Source
+
+This project was created as a **hands-on learning exercise** based on the following YouTube tutorial:
+
+https://youtu.be/dQlw1Cdd3pw  
+
+The script was written and adapted while practicing concepts from this tutorial.
+
+
