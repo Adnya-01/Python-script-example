@@ -37,4 +37,4 @@ jobs:
 
       # 5. Run our Python automation script
       - name: Run Python script
-        run: python get_game_data.py
+        run: python get_game_data.py data target
