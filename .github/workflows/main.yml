@@ -1,0 +1,40 @@
+name: Python and Go Build
+
+# Run this workflow whenever code is pushed
+# or a pull request is opened against main.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Download our repository onto the GitHub runner
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Install Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3. Install Go
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "stable"
+
+      # 4. Show installed versions
+      - name: Check versions
+        run: |
+          python --version
+          go version
+
+      # 5. Run our Python automation script
+      - name: Run Python script
+        run: python get_game_data.py
