@@ -38,3 +38,12 @@ jobs:
       # 5. Run our Python automation script
       - name: Run Python script
         run: python get_game_data.py data target
+
+      - name: Verify metadata output
+        run: |
+          if find target -name "metadata.json" -print -quit | grep -q .; then
+            echo "metadata.json generated successfully"
+          else
+            echo "ERROR: metadata.json was not generated"
+            exit 1
+          fi
